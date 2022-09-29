@@ -1,24 +1,57 @@
 # JAMStack personal blog - starter files
 
-These are the starting files used by [Kevin Powell](https://kevinpowell.co) to create a personal blog site for the [Codementor](https://www.codementor.io/) DevProjects Challenge, [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb). You are free to use them however you want to get started with the challenge, if you'd like to start working on creating the site without worrying about the content itself.
 
-The provided files are finished pages using regular HTML and CSS. The HTML files can be broken down into peices, and used to build out the different templates and partial files using a templating language of your choice.
+## Demos
 
-The styling of the pages is already complete. That said, the `design-files` folder contains both a Figma file, and .jpg of a design if you want to try to build it from scratch. You do not need to use this design at all either, it depends on how you wish to approach the challenge.
+- [Netlify](https://eleventy-base-blog.netlify.com/)
+- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
+- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
+.
 
-The `src` folder contains files so that you can get your project up and running without worrying about content for posts/articles. That folder contains:
+## Getting Started
 
-- HTML files to use as a base for the different page layouts. These can be turned into the templates that will be used.
-- CSS file for styling the pages
-- 5 blog articles in the `blog` folder
-- images and a logo in the `assets` folder
+###  Install dependencies
 
-The articles are written in Markdown, and include Front Matter. Depending on the Static Site Generator you use, it is possible that you will have to modify these a little if you wish to use them. 
+```
+npm install
+```
 
-## DevProjects Challenge
+### Edit \_data/metadata.json
 
-As mentioned, these files are here to help get started with a DevProjects challenge. Please visit the [challenge page](#) to learn more about the challenge.
+###  Run Eleventy
 
-## Tutorial
+```
+npx @11ty/eleventy
+```
 
-You can [watch this video](https://youtu.be/4wD00RT6d-g) to see how Kevin uses Eleventy, Netlify, and Netlify CMS to create a full-featured blog site built entirely with static files.
+Or build and host locally for local development
+
+```
+npx @11ty/eleventy --serve
+```
+
+Or build automatically when a template changes:
+
+```
+npx @11ty/eleventy --watch
+```
+
+Or in debug mode:
+
+```
+DEBUG=* npx @11ty/eleventy
+```
+
+### Implementation Notes
+
+- `about/index.md` shows how to add a content page.
+- `posts/` has the blog posts but really they can live in any directory. They need only the `post` tag to be added to this collection.
+- Use the `eleventyNavigation` key in your front matter to add a template to the top level site navigation. For example, this is in use on `index.njk` and `about/index.md`.
+- Content can be any template format (blog posts needn’t be markdown, for example). Configure your supported templates in `.eleventy.js` -> `templateFormats`.
+- The `css` and `img` directories in the input directory will be copied to the output folder (via `addPassthroughCopy()` in the `.eleventy.js` file).
+
+- This example uses three layouts:
+  - `_includes/layouts/base.njk`: the top level HTML structure
+  - `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
+  - `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
+- `_includes/postlist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `index.njk` has an example of how to use it.

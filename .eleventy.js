@@ -4,14 +4,18 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//     let url = "https://cosmicorderceramics.super.site/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2F02e89907-6077-47dd-9dd7-c6cf5adf6c04%2Fimages%2Faa9e03ce-45b6-45c0-93bb-3b2653e4768d.jpg&w=3840&q=80";
+//     let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/436347f8-d739-496e-8e8f-2db2c785a34c/rust_yunomi_collage.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220929%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220929T201329Z&X-Amz-Expires=86400&X-Amz-Signature=ead68feaa5942894b3a46e4a2d0312b2d0b7dc8693fc688b3b017ad858c56296&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22rust%2520yunomi%2520collage.jpg%22&x-id=GetObject";
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
 //     });
 //     const html = Image.generateHTML(stats, {
 //         alt: "Rust Yunomi", // alt text is required!
-//         sizes: "100vw" 
+//         sizes: "100vw",
+//         style: "content-visibility:auto", 
+//         decoding:"async",
+//         loading:"lazy", 
+//         class:"kg-image"
 //     })
 
 //     console.log(html);
