@@ -1,0 +1,121 @@
+.c-header {
+    padding: var(--space-32) 0;
+    margin-bottom: var(--space-32);
+    border-bottom: var(--border-width) var(--border-style) var(--color-border);
+}
+    
+.c-header__inner {
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.c-skip {
+position: absolute;
+top: calc(var(--space-96) * -1);
+left: var(--space-32);
+padding: var(--space-4) var(--space-16);
+background-color: var(--color-background-primary);
+}
+
+.c-logo {
+margin-right: var(--space-32);
+font-size: var(--font-size-large);
+font-weight: var(--font-weight-medium);
+}
+
+/* mobile + tablet */
+@media (max-width: 63.99em) {
+    .c-logo__img {
+        max-height: var(--space-56);
+    }
+    .c-logo__img-desktop {
+        display: none;
+    }
+    
+    .c-nav-wrap { 
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        padding: var(--space-32) var(--grid-margin);
+        background-color: var(--color-background-secondary);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(.96);
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        padding: var(--space-32) var(--grid-margin);
+        background-color: var(--color-background-secondary);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(.96);
+    }
+    .c-nav {
+        width: 100%;
+        padding-right: var(--space-40);
+    }
+}
+
+/* desktop */
+
+@media (min-width: 64em){
+    .c-logo__img {
+        max-height: var(--space-80);
+    }
+    .c-logo__img-desktop {
+        display: block;
+    }
+    .c-logo__img-mobile {
+        display: none;
+    }
+    .c-nav-wrap {
+        display: block;
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .c-nav {
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .c-nav__item:not(:last-child) {
+        margin-right: var(--space-32);
+    }
+}
+
+.c-nav-toggle {
+position: absolute;
+right: 0;
+z-index: 10;
+height: var(--space-16);
+width: var(--space-24);
+cursor: pointer;
+}
+
+.c-nav-toggle__icon {
+position: absolute;
+left: 0;
+height: 1px;
+width: var(--space-24);
+background: var(--color-text-primary);
+cursor: pointer;
+}
+
+.c-nav-toggle__icon:before {
+transform: translateY(16px);
+}
+
+.c-nav-toggle__icon:after, .c-nav-toggle__icon:before {
+content: "";
+display: block;
+height: 100%;
+background-color: inherit;
+}

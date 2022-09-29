@@ -1,0 +1,26 @@
+---
+layout: 'base.njk'
+---
+<div class='c-page-header'>
+    <div class='o-grid o-grid--2-columns'>  
+        <div>
+            <h1 class='c-page-header__heading u-font-heading'>{{ title }}</h1>
+            <div class='c-page-header__meta'>
+                <time class='c-card-post__date' datetime="{{ page.date | postDate }}">{{ page.date | postDate }}</time> 
+            </div>
+            <div class='c-page-header__tags'>
+                {% for tag in tags %}
+                    <a href="/blog/tag/{{ tag | slugify  }}"> {{ tag | capitalize }}</a>
+                      ✺  
+                {% endfor %}
+            </div>
+        </div>
+        <p class='c-page-header__subHeading u-font-subHeading'> {{ subheading }}</p>
+    </div>
+</div>
+
+<article class="c-content">
+    {{ content | safe }}
+</article>
+
+

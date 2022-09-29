@@ -1,0 +1,12 @@
+<div class="c-card-post post featured large">
+    <a href="{{ post.url }}" class="c-card-post__media">
+        <img src="{{ post.data.image }}" class="c-card-post__image lazyload" alt=" {{ post.data.imageAlt }} ">
+    </a>
+    <div class='c-card-post__meta'>
+        <!-- filter -->
+        <time class='c-card-post__date'datetime="{{ post.date | htmlDateString }}">{{ post.date | postDate }}</time> 
+        <div class='c-card-post__title'> 
+            <a href="{{ post.url }}">{{ post.data.title}}</a> 
+        </div>
+    </div>
+</div>

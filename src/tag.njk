@@ -1,0 +1,27 @@
+---
+layout: 'base.njk'
+pagination: 
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollection: true
+
+permalink: "/blog/tag/{{ tag | slugify }}/index.html"
+eleventyComputed:
+    title: Post Tagged with "{{ tag }}"
+
+---
+
+<header class="c-page-header">
+        <div class="o-grid o-grid--2-columns">
+            <h1 class="c-page-header__heading u-font-heading">
+                {{ tag  | capitalize }}
+            </h1>
+        </div>
+</header>
+<div class="o-grid o-grid--3-columns">
+    {%- for post in collections[tag] | reverse -%}
+        {% include 'all-posts.njk' %}
+    {%- endfor -%}
+</div>
+
