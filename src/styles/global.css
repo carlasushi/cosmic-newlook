@@ -23,7 +23,7 @@
     --font-weight-bold: 700;
     --font-letter-space: .2em;
     --font-letter-space-negative: -.0313em;
-    --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-family: 'Courier Prime', monospace;
 
     --html-symbol-divider: "✺";
     --html-symbol-checkmark: "✓";
@@ -31,12 +31,13 @@
     --html-symbol-emDash: "—";
     --html-symbol-space: " ";
   
-    --color-text-primary: #0f0f06;
-    --color-text-secondary: #424242;
-    --color-text-tertiary: #b16c3c;
-    --color-border: #6A6A25;
-    --color-background-primary: #F7F7E9;
-    --color-background-secondary: #FFFFFF;
+    /* --color-text-primary: #0f0f06; */
+     --color-text-primary: #4242ae;
+    --color-text-secondary: #002d5c;
+    /* --color-text-tertiary: #b16c3c; */
+    --color-border: #b16c3c;
+    --color-background-primary: white;
+    --color-background-secondary: #b16d3c60;
 
     --color-text-button: var(--color-text-primary);
     --color-border-button: var(--color-text-primary);
@@ -47,7 +48,7 @@
     --border-radius: var(--space-4);
     --border-radius-pill: var(--space-40);
     --border-radius-circle: 50%;
-    --border-width: 1px;
+    --border-width: 2px;
     --border-style: solid;
 
     --ratio-1: 1;
