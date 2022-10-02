@@ -8,6 +8,7 @@
     letter-spacing: var(--font-letter-space);
 }
 
+
 .c-section-headline {
     display: flex;
     align-content: center;
@@ -19,7 +20,7 @@
 .c-card-post {
     display: block;
     padding: var(--space-24);
-    border-radius: var(--space-32);
+    /* border-radius: var(--space-32); */
     border: var(--border-width) var(--border-style) var(--color-border);
 }
 
@@ -54,7 +55,7 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: var(--space-16); 
+    /* border-radius: var(--space-16);  */
 }
 
 .c-card-post__tag {

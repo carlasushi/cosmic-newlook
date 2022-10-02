@@ -1,17 +1,19 @@
 const { DateTime} = require('luxon');
+const { minify } = require("terser");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
+
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c3a4a7ea-aa82-42a1-9a11-5ce36df735f2/Frame_3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221001%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221001T053255Z&X-Amz-Expires=86400&X-Amz-Signature=5e96ed5d33993779757827011ec265aa36820e9f1ba5943772a48efbf7e37476&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Frame%25203.jpg%22&x-id=GetObject"
+//         let url = "https://i.pinimg.com/originals/5e/4f/a5/5e4fa5158f02314ca42c722aedcdbe29.jpg"
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
 
 //     });
 //     const html = Image.generateHTML(stats, {
-//         alt: "Tamalpais mugs on shelves", // alt text is required!
+//         alt: "Kimiyo Mishima's 'Work 2012' in Tennōzu Isle.", // alt text is required!
 //         sizes: "100vw",
 //         style: "content-visibility:auto", 
 //         decoding:"async",
@@ -23,11 +25,16 @@ const Image = require("@11ty/eleventy-img");
 // })();
 
 
+https://www.11ty.dev/docs/quicktips/inline-js/
+
+
+
+
 module.exports = function(eleventyConfig) {
 
     // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy('./src/styles/');
-    eleventyConfig.addPassthroughCopy('./src/assets/');
+    // eleventyConfig.addPassthroughCopy('./src/assets/');
     eleventyConfig.addPassthroughCopy('./src/img/');
 
     // Add plugins
@@ -44,6 +51,21 @@ module.exports = function(eleventyConfig) {
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    })
+
+    // https://www.11ty.dev/docs/quicktips/inline-js/
+    eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
+        code,
+        callback
+    ) {
+    try {
+        const minified = await minify(code);
+        callback(null, minified.code);
+    } catch (err) {
+        console.error("Terser error: ", err);
+        // Fail gracefully.
+        callback(null, code);
+    }
     })
 
 
@@ -63,6 +85,7 @@ module.exports = function(eleventyConfig) {
         dir: {
             input: "src",
             includes: "_includes",
+            // layouts: "_layouts",
             data: "_data",
             output: "public",
         }

@@ -1,4 +1,4 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
 @import url('reset.css');
 @import url('header.css');
 @import url('home.css');
@@ -32,12 +32,12 @@
     --html-symbol-space: " ";
   
     /* --color-text-primary: #0f0f06; */
-     --color-text-primary: #4242ae;
-    --color-text-secondary: #002d5c;
-    /* --color-text-tertiary: #b16c3c; */
-    --color-border: #b16c3c;
+    --color-text-primary: blue;
+    --color-text-secondary: blue;
+    --color-text-tertiary: Chartreuse;
+    --color-border: blue;
     --color-background-primary: white;
-    --color-background-secondary: #b16d3c60;
+    --color-background-secondary:Peru ;
 
     --color-text-button: var(--color-text-primary);
     --color-border-button: var(--color-text-primary);
@@ -157,7 +157,7 @@ img {
   height: auto;
     display: block;
     max-width: 100%;
-    font-style: italic;
+    font-style: normal;
 }
 
 
