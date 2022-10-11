@@ -25,7 +25,9 @@
 }
 
 .c-card-post:hover{
-    background-color: var(--color-background-secondary);
+    /* background-color: var(--color-background-secondary); */
+    opacity: 0.7;
+    border: var(--border-width) var(--border-style) var(--color-border-hover);
 }
 
 .c-card-post__media {

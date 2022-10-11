@@ -12,9 +12,9 @@
     --line-height-small: 1.5;
     --font-size-base: 1.25rem;
     --line-height-base: 1.6;
-    --font-size-large: 1.rem;
+    --font-size-large: 1.563rem;
     --line-height-large: 1.4285714286;
-    --font-size-xLarge: 3.052rem;
+    --font-size-xLarge: 1.953rem;
     --line-height-xLarge: 1.3333333333;
 
     --line-height-tight: 1;
@@ -36,8 +36,10 @@
     --color-text-secondary: blue;
     --color-text-tertiary: Chartreuse;
     --color-border: blue;
+    --color-border-hover: peru;
     --color-background-primary: white;
-    --color-background-secondary:Peru ;
+    --color-background-secondary:#F4A460;
+    
 
     --color-text-button: var(--color-text-primary);
     --color-border-button: var(--color-text-primary);
@@ -87,18 +89,13 @@
     --motion-duration-slow: .5s;
     --motion-duration-fast: .25s;
   }
-  
-/* desktop view */
-/* https://type-scale.com/ 1.333 -- Perfect Fourth */
-@media (min-width: 64em) {
-  :root {
-    --font-size-small: 1.333rem;
-    --font-size-base: 1.777rem;
-    --font-size-large: 2.369rem;
-    --font-size-xLarge: 3.157rem;
+
+@media (max-width: 63.99em) { 
+  p {
+    font-size: .8rem;
+    --font-size-large: 1rem;
   }
 }
-
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -316,5 +313,20 @@ Utility Classes | Reusable Styles
   font-size: var(--font-size-large);
   line-height: var(--line-height-large);
   font-weight: var(--font-weight-normal);
+}
+
+/* mobile + tablet */
+@media (max-width: 63.99em) { 
+  .u-font-heading {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    font-weight: var(--font-weight-normal);
+  }
+  
+  .u-font-subHeading {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+    font-weight: var(--font-weight-small);
+  }
 }
 

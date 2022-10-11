@@ -157,7 +157,7 @@ u-drop-cap-large::first-letter {
 
 
 /* BREAKPOINTS */
-/* table < */
+/* tablet  */
 @media (min-width: 40em){
     .kg-width-wide {
         width: calc(100vw - calc(var(--grid-margin) * 2));
@@ -165,3 +165,12 @@ u-drop-cap-large::first-letter {
     }
 }
 
+
+/* mobile + tablet */
+@media (max-width: 63.99em) { 
+    .kg-blockquote-alt, blockquote {
+        font-size: var(--font-size-medium);
+        line-height: var(--line-height-medium);
+        font-weight: var(--font-weight-normal);
+    }
+}  

@@ -11,7 +11,6 @@ menuIcon.addEventListener('click', () => {
     }
 });
 
-
 // Toggle Menu Icon 
 let toggleIcon = document.querySelector('.menuIcon');
 

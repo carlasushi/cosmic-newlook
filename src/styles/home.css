@@ -21,6 +21,7 @@ blockquote {
     top: var(--space-96);
     align-self: start;
     background-color: var(--color-background-secondary);
+    border: blue solid 2px;
 }
 
 .c-feature-image-caption {
