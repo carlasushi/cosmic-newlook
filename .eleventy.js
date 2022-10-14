@@ -6,14 +6,14 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//         let url = "https://i.pinimg.com/originals/5e/4f/a5/5e4fa5158f02314ca42c722aedcdbe29.jpg"
+//         let url = "https://super-static-assets.s3.amazonaws.com/02e89907-6077-47dd-9dd7-c6cf5adf6c04/images/9ef4b0a5-1a60-4af0-8c63-99eb419d0ac3.jpg?w=1500&f=webp"
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
 
 //     });
 //     const html = Image.generateHTML(stats, {
-//         alt: "Kimiyo Mishima's 'Work 2012' in Tennōzu Isle.", // alt text is required!
+//         alt: "Plates", // alt text is required!
 //         sizes: "100vw",
 //         style: "content-visibility:auto", 
 //         decoding:"async",

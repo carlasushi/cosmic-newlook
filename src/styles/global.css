@@ -5,6 +5,8 @@
 @import url('posts.css');
 @import url('article.css');
 @import url('footer.css');
+@import url('faqs.css');
+@import url('pricing.css');
 
 :root {
     /* https://type-scale.com/ 1.250 Major Third */
@@ -18,6 +20,7 @@
     --line-height-xLarge: 1.3333333333;
 
     --line-height-tight: 1;
+    --font-weight-small: 100;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
@@ -33,7 +36,7 @@
   
     /* --color-text-primary: #0f0f06; */
     --color-text-primary: blue;
-    --color-text-secondary: blue;
+    --color-text-secondary: peru;
     --color-text-tertiary: Chartreuse;
     --color-border: blue;
     --color-border-hover: peru;
@@ -157,6 +160,10 @@ img {
     font-style: normal;
 }
 
+.lazyloaded {
+  opacity: 1;
+  transition: opacity var(--motion-duration-slow) ease;
+}
 
 /* //////////////////////
 Utility Classes | Reusable Styles
@@ -245,6 +252,13 @@ Utility Classes | Reusable Styles
   padding: 0;
 }
 
+.c-grid {
+  margin: auto;
+  display: grid;
+  grid-gap: var(--grid-gap);
+  max-width: 50%;
+  padding: 0 var(--grid-margin);
+}
 
 .o-grid {
   margin: auto;
@@ -317,6 +331,10 @@ Utility Classes | Reusable Styles
 
 /* mobile + tablet */
 @media (max-width: 63.99em) { 
+  .c-grid{
+    max-width: 100%;
+    padding: 0;
+  }
   .u-font-heading {
     font-size: var(--font-size-medium);
     line-height: var(--line-height-medium);

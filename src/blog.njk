@@ -5,12 +5,13 @@ layout: 'base.njk'
 
 <header class='c-page-header'>
   <div class='o-grid o-grid--2-columns'>
-    <h1 class='c-page-header__heading u-font-heading'>Blog</h1>
+    <!-- removed c-page-header__heading u-font-heading -->
+    <h1>Blog</h1>
   </div>
 </header>
 
-<!-- all posts -->
-<div class="o-grid o-grid--3-columns">
+<!-- all posts removed o-grid--3-columns -->
+<div class="o-grid o-grid--2-columns">
   {%- for post in collections.post | reverse -%}
     {% include 'all-posts.njk' %}
   {%- endfor -%}

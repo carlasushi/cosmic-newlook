@@ -1,0 +1,27 @@
+table, th, td {
+    border-top: 1px solid;
+    color:black;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-small);
+}
+
+td { 
+    padding: 10px;
+}
+/* 
+tr {
+    padding-left: 2rem;
+} */
+table {
+    margin: 0 var(--space-48);
+}
+
+thead {
+    background-color: rgba(211, 211, 211, 0.372);
+}
+
+@media (max-width: 63.99em) { 
+    table, th, td {
+        font-size: var(--font-size-small);
+    }
+}

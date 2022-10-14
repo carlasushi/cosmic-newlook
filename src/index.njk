@@ -11,7 +11,7 @@ layout: 'base.njk'
         Items are made with reclaimed clay  ●  This pottery is dishwasher and microwave safe.
       </h2>
       </br>
-      <p> I make each piece while on board in a houseboat, then I transport them by bicycle to a community studio to fire.</p>
+      <p> I make each piece while on board in a Californian old houseboat, then I transport them by bicycle to a community studio to fire.</p>
       <p> The process is slow, meditative and enjoyable.  The inspiration to make artwork is mostly site specific.</p>
       <p> Besides functional pottery I make small sculptures and vases.</p>   
       </br>
@@ -25,33 +25,39 @@ layout: 'base.njk'
         </em>
       </span>
       </p>
+    <!-- newsletter -->
+      <div class="c-subscribe">
+        <p>For the occasional email, to get notified about new fun collections - add your email here: </p>
+        <form  action="https://tinyletter.com/cosmicorderceramics" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/cosmicorderceramics', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+          <div class="c-form-group">
+            <p>
+              <label for="tlemail" class="u-screenreader">Enter your email address</label>
+            </p>
+            <p>
+              <input type="text"  name="email" id="tlemail" class="c-form-group__input"/>
+            </p>
+            <input type="hidden" value="1" name="embed"/>
+            <button type="submit" value="Subscribe" class="c-btn c-form-group__btn">
+              Subscribe
+            </button>
+          </div>
+        </form>  
+      </div>
     </article>
     <figure class='c-feature-image-figure'>
-      <picture><source type="image/avif" srcset="/img/pGJmvMERyJ-600.avif 600w, /img/pGJmvMERyJ-1000.avif 1000w" sizes="100vw"><source type="image/jpeg" srcset="/img/pGJmvMERyJ-600.jpeg 600w, /img/pGJmvMERyJ-1000.jpeg 1000w" sizes="100vw"><img alt="Collage of Cosmic Order Brand Story" style="content-visibility:auto" decoding="async" loading="lazy" class="c-feature-image" src="/img/pGJmvMERyJ-600.jpeg" width="1000" height="1777"></picture>
+      <picture><source type="image/avif" srcset="/img/pGJmvMERyJ-600.avif 600w, /img/pGJmvMERyJ-1000.avif 1000w" sizes="100vw">
+        <source type="image/jpeg" srcset="/img/pGJmvMERyJ-600.jpeg 600w, /img/pGJmvMERyJ-1000.jpeg 1000w" sizes="100vw">
+        <img alt="Collage of Cosmic Order Brand Story" style="content-visibility:auto" decoding="async" loading="lazy" class="c-feature-image lazyloaded" src="/img/pGJmvMERyJ-600.jpeg" width="1000" height="1777"></picture>
     </figure>
-  </div>
+</div>
 </section>
 
 <!-- Featured posts -->
-<section>
-  <div class='c-section c-section--featured-posts'>
-    <div class='o-grid'>
-      <div class='c-section-headline'>
-        <h2 class='c-section-headline__title'>Featured Posts</h2>
-      </div>
-    </div>
 
-    <div class='o-grid o-grid--2-columns'>
-      {%- for post in collections.featured | reverse -%}
-      {% include 'featured-posts.njk' %}
-    {%- endfor -%}
-    </div>
-  </div>
-</section>
 
 <!-- recent posts -->
 <section id="blog">
-  <div class="c-section c-section--recent-posts">
+  <div class="c-section">
     <div class="o-grid">
       <div class="c-section-headline">
         <h2 class="c-section-headline__title">
@@ -59,8 +65,8 @@ layout: 'base.njk'
         </h2>
         <a href="/blog/" class="u-link u-font-size-small u-font-uppercase u-font-letter-space ">View all</a>  
       </div>
-      <!-- articles grid  -->
-      <div class="o-grid o-grid--3-columns">
+      <!-- articles grid originally o-grid--3-columns  -->
+      <div class="o-grid o-grid--2-columns">
         <!-- cards -->
         {%- for post in collections.post | reverse -%}
           {% include 'all-posts.njk' %}
