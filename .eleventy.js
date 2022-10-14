@@ -6,14 +6,14 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//         let url = "https://super-static-assets.s3.amazonaws.com/02e89907-6077-47dd-9dd7-c6cf5adf6c04/images/9ef4b0a5-1a60-4af0-8c63-99eb419d0ac3.jpg?w=1500&f=webp"
+//         let url = "https://cosmicorderceramics.super.site/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2F02e89907-6077-47dd-9dd7-c6cf5adf6c04%2Fimages%2Fe5762bab-7db9-4f66-82e1-45e70b7af71f.jpg&w=3840&q=80"
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
 
 //     });
 //     const html = Image.generateHTML(stats, {
-//         alt: "Plates", // alt text is required!
+//         alt: "Many mugs on shelves", // alt text is required!
 //         sizes: "100vw",
 //         style: "content-visibility:auto", 
 //         decoding:"async",
