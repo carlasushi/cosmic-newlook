@@ -93,12 +93,12 @@
     --motion-duration-fast: .25s;
   }
 
-@media (max-width: 63.99em) { 
-  p {
-    font-size: .8rem;
-    --font-size-large: 1rem;
+  @media (max-width: 63.99em) { 
+    p {
+      font-size: .95rem;
+      --font-size-large: 1rem;
+    }
   }
-}
 *, ::after, ::before {
   box-sizing: border-box;
 }
