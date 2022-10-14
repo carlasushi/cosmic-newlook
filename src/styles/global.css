@@ -336,7 +336,7 @@ Utility Classes | Reusable Styles
 @media (max-width: 63.99em) { 
   .c-grid{
     max-width: 100%;
-    padding: 0;
+    padding: 0 var(--space-24);
   }
   .u-font-heading {
     font-size: var(--font-size-medium);
