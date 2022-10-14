@@ -267,7 +267,10 @@ Utility Classes | Reusable Styles
   max-width: var(--grid-width);
   padding: 0 var(--grid-margin);
 }
-
+.shop-link {
+  font-size: 1.5rem;
+  
+}
 /* tablet */
 @media (min-width: 40em) {
   .o-grid--2-columns {

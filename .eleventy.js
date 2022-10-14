@@ -5,24 +5,24 @@ const Image = require("@11ty/eleventy-img");
 
 //  worked ok for img optimization in ./img folder
 
-// (async () => {
-//         let url = "https://cosmicorderceramics.super.site/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2F02e89907-6077-47dd-9dd7-c6cf5adf6c04%2Fimages%2Fe5762bab-7db9-4f66-82e1-45e70b7af71f.jpg&w=3840&q=80"
-//     let stats = await Image(url, {
-//         formats: ["avif", "jpeg"],
-//         widths: [600, 1000, 1600, 2400],
+(async () => {
+        let url = "https://cdn.shopify.com/s/files/1/0233/5583/files/isbl_3360x840.33800874_kw96qeze.jpg?14430059479518199626"
+    let stats = await Image(url, {
+        formats: ["avif", "jpeg"],
+        widths: [600, 1000, 1600, 2400],
 
-//     });
-//     const html = Image.generateHTML(stats, {
-//         alt: "Many mugs on shelves", // alt text is required!
-//         sizes: "100vw",
-//         style: "content-visibility:auto", 
-//         decoding:"async",
-//         loading:"lazy", 
-//         class:"kg-image"
-//     })
+    });
+    const html = Image.generateHTML(stats, {
+        alt: "Brigitte Colleaux smiling holding a plate", // alt text is required!
+        sizes: "100vw",
+        style: "content-visibility:auto", 
+        decoding:"async",
+        loading:"lazy", 
+        class:"kg-image"
+    })
 
-//     console.log(html);
-// })();
+    console.log(html);
+})();
 
 
 https://www.11ty.dev/docs/quicktips/inline-js/
