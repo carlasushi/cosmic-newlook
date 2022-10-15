@@ -5,24 +5,24 @@ const Image = require("@11ty/eleventy-img");
 
 //  worked ok for img optimization in ./img folder
 
-(async () => {
-        let url = "https://cdn.shopify.com/s/files/1/0233/5583/files/isbl_3360x840.33800874_kw96qeze.jpg?14430059479518199626"
-    let stats = await Image(url, {
-        formats: ["avif", "jpeg"],
-        widths: [600, 1000, 1600, 2400],
+// (async () => {
+//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/769380e3-9b00-4041-8f96-9fe23121cb2f/carla.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221015T013436Z&X-Amz-Expires=86400&X-Amz-Signature=b82c4b564eae3c9e3dfb5b44dd6dde216901a41e6b8c2693c652dcab03cf56d8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22carla.jpeg%22&x-id=GetObject"
+//     let stats = await Image(url, {
+//         formats: ["avif", "jpeg"],
+//         widths: [600, 1000, 1600, 2400],
 
-    });
-    const html = Image.generateHTML(stats, {
-        alt: "Brigitte Colleaux smiling holding a plate", // alt text is required!
-        sizes: "100vw",
-        style: "content-visibility:auto", 
-        decoding:"async",
-        loading:"lazy", 
-        class:"kg-image"
-    })
+//     });
+//     const html = Image.generateHTML(stats, {
+//         alt: "Carla profile", // alt text is required!
+//         sizes: "100vw",
+//         style: "content-visibility:auto", 
+//         decoding:"async",
+//         loading:"lazy", 
+//         class:"kg-image"
+//     })
 
-    console.log(html);
-})();
+//     console.log(html);
+// })();
 
 
 https://www.11ty.dev/docs/quicktips/inline-js/
