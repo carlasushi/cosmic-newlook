@@ -32,6 +32,9 @@ https://www.11ty.dev/docs/quicktips/inline-js/
 
 module.exports = function(eleventyConfig) {
 
+    // favicon
+    eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });
+
     // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy('./src/styles/');
     // eleventyConfig.addPassthroughCopy('./src/assets/');
