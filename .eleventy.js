@@ -6,14 +6,14 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/769380e3-9b00-4041-8f96-9fe23121cb2f/carla.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221015%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221015T013436Z&X-Amz-Expires=86400&X-Amz-Signature=b82c4b564eae3c9e3dfb5b44dd6dde216901a41e6b8c2693c652dcab03cf56d8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22carla.jpeg%22&x-id=GetObject"
+//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/093490e8-f458-4158-838f-721e0f2a8677/43FF4689-0246-4AC3-AFC1-14EFEAE83D5D.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221201T034804Z&X-Amz-Expires=86400&X-Amz-Signature=5a49e3fbc89d72c93df4c32ef08e994abe9cf829e1708f2446377c8146ab7d88&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%2243FF4689-0246-4AC3-AFC1-14EFEAE83D5D.JPG.jpg%22&x-id=GetObject"
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
 
 //     });
 //     const html = Image.generateHTML(stats, {
-//         alt: "Carla profile", // alt text is required!
+//         alt: "Small Vase", // alt text is required!
 //         sizes: "100vw",
 //         style: "content-visibility:auto", 
 //         decoding:"async",
