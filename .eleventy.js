@@ -6,7 +6,7 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 // (async () => {
-//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/093490e8-f458-4158-838f-721e0f2a8677/43FF4689-0246-4AC3-AFC1-14EFEAE83D5D.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221201%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221201T034804Z&X-Amz-Expires=86400&X-Amz-Signature=5a49e3fbc89d72c93df4c32ef08e994abe9cf829e1708f2446377c8146ab7d88&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%2243FF4689-0246-4AC3-AFC1-14EFEAE83D5D.JPG.jpg%22&x-id=GetObject"
+//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/466a74e3-ee18-4bab-b82d-398bea71617e/inner_worlds_3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221208T193859Z&X-Amz-Expires=86400&X-Amz-Signature=16313aab34e510bad174903617cc537050aae9bfa2334f26f4ad76f9c2bfd620&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22inner%2520worlds%25203.jpg%22&x-id=GetObject"
 //     let stats = await Image(url, {
 //         formats: ["avif", "jpeg"],
 //         widths: [600, 1000, 1600, 2400],
