@@ -5,24 +5,24 @@ const Image = require("@11ty/eleventy-img");
 
 //  worked ok for img optimization in ./img folder
 
-// (async () => {
-//         let url = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/466a74e3-ee18-4bab-b82d-398bea71617e/inner_worlds_3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221208%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221208T193859Z&X-Amz-Expires=86400&X-Amz-Signature=16313aab34e510bad174903617cc537050aae9bfa2334f26f4ad76f9c2bfd620&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22inner%2520worlds%25203.jpg%22&x-id=GetObject"
-//     let stats = await Image(url, {
-//         formats: ["avif", "jpeg"],
-//         widths: [600, 1000, 1600, 2400],
+(async () => {
+        let url = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-15/342534083_532768988934400_6950276791449197750_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=104&_nc_ohc=yCb145URdGMAX89yd8G&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfAGI6xo8fcd11y7Iy7KQ2QmfkDKd48oY025ncdgKhdv_w&oe=6482E0CB&_nc_sid=8721cf"
+    let stats = await Image(url, {
+        formats: ["avif", "jpeg"],
+        widths: [600, 1000, 1600, 2400],
 
-//     });
-//     const html = Image.generateHTML(stats, {
-//         alt: "Small Vase", // alt text is required!
-//         sizes: "100vw",
-//         style: "content-visibility:auto", 
-//         decoding:"async",
-//         loading:"lazy", 
-//         class:"kg-image"
-//     })
+    });
+    const html = Image.generateHTML(stats, {
+        alt: "Alake Shilling show poster", // alt text is required!
+        sizes: "100vw",
+        style: "content-visibility:auto", 
+        decoding:"async",
+        loading:"lazy", 
+        class:"kg-image"
+    })
 
-//     console.log(html);
-// })();
+    console.log(html);
+})();
 
 
 https://www.11ty.dev/docs/quicktips/inline-js/
