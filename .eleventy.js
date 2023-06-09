@@ -6,14 +6,14 @@ const Image = require("@11ty/eleventy-img");
 //  worked ok for img optimization in ./img folder
 
 (async () => {
-        let url = "https://scontent-sjc3-1.cdninstagram.com/v/t51.2885-15/342534083_532768988934400_6950276791449197750_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=104&_nc_ohc=yCb145URdGMAX89yd8G&edm=AP_V10EBAAAA&ccb=7-5&oh=00_AfAGI6xo8fcd11y7Iy7KQ2QmfkDKd48oY025ncdgKhdv_w&oe=6482E0CB&_nc_sid=8721cf"
+        let url = "https://gambatte.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff5589881-fca6-4136-95ab-605f47146b35%2FCeramic_Sale.jpeg?id=f6ca1878-ac03-40d5-a990-182c8cdc7725&table=block&spaceId=aa01f6be-9697-4f4f-a7ad-555584313cde&width=1920&userId=&cache=v2"
     let stats = await Image(url, {
         formats: ["avif", "jpeg"],
         widths: [600, 1000, 1600, 2400],
 
     });
     const html = Image.generateHTML(stats, {
-        alt: "Alake Shilling show poster", // alt text is required!
+        alt: "Ceramic Sale Poster", // alt text is required!
         sizes: "100vw",
         style: "content-visibility:auto", 
         decoding:"async",
@@ -25,7 +25,7 @@ const Image = require("@11ty/eleventy-img");
 })();
 
 
-https://www.11ty.dev/docs/quicktips/inline-js/
+// https://www.11ty.dev/docs/quicktips/inline-js/
 
 
 
