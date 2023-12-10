@@ -5,24 +5,24 @@ const Image = require("@11ty/eleventy-img");
 
 //  worked ok for img optimization in ./img folder
 
-// (async () => {
-//         let url = "https://gambatte.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1a20a82b-bf5c-4078-8c36-5a6934752e09%2Ftapir.jpg?id=5b24a4ac-80cc-46a0-acdd-5029a3d6ffbc&table=block&spaceId=aa01f6be-9697-4f4f-a7ad-555584313cde&width=2000&userId=&cache=v2"
-//     let stats = await Image(url, {
-//         formats: ["avif", "jpeg"],
-//         widths: [600, 1000, 1600, 2400],
+(async () => {
+        let url = "https://file.notion.so/f/f/aa01f6be-9697-4f4f-a7ad-555584313cde/90a21883-2855-44ef-a674-8f4a2f2c56bd/fugu.jpg?id=61a6ac20-a8ca-4104-b99d-8630507fedd0&table=block&spaceId=aa01f6be-9697-4f4f-a7ad-555584313cde&expirationTimestamp=1702281600000&signature=tLokwsawVTuNHOLAVvt8DQ2l9XSM3-lUDw6IZjm-Omk&downloadName=fugu.jpg"
+    let stats = await Image(url, {
+        formats: ["avif", "jpeg"],
+        widths: [600, 1000, 1600, 2400],
 
-//     });
-//     const html = Image.generateHTML(stats, {
-//         alt: "Tapir relaxing", // alt text is required!
-//         sizes: "100vw",
-//         style: "content-visibility:auto", 
-//         decoding:"async",
-//         loading:"lazy", 
-//         class:"kg-image"
-//     })
+    });
+    const html = Image.generateHTML(stats, {
+        alt: "Fugu Planter", // alt text is required!
+        sizes: "100vw",
+        style: "content-visibility:auto",
+        decoding:"async",
+        loading:"lazy",
+        class:"kg-image"
+    })
 
-//     console.log(html);
-// })();
+    console.log(html);
+})();
 
 
 // https://www.11ty.dev/docs/quicktips/inline-js/
@@ -82,7 +82,7 @@ module.exports = function(eleventyConfig) {
 
         // Pre-process *.html files with: (default: `liquid`)
         htmlTemplateEngine: "njk",
-    
+
         // These are all optional:
 
         dir: {
@@ -94,4 +94,3 @@ module.exports = function(eleventyConfig) {
         }
     };
 }
-
